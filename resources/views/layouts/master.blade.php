@@ -228,7 +228,7 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Mahasiswa
               </p>
@@ -237,7 +237,7 @@
           <li class="nav-item">
               <p>
                 <a href="../widget.html" class="nav-link"></a>
-                <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-user-tie"></i>
               </p>
             </a>
           </li>
