@@ -16,6 +16,10 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('layouts.master');
+})->middleware('auth');
+
+Route::get('/login', function () {
+    return view('layouts.login');
 });
 
 Auth::routes();
