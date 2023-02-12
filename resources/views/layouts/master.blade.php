@@ -230,7 +230,7 @@
             <a href="../widgets.html" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Data Mahasiswa
+                Data Siswa
               </p>
             </a>
           </li>
