@@ -36,6 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/jurusan', [JurusanController::class, 'store']);
     Route::get('/jurusan/edit/{id}', [JurusanController::class, 'edit']);
     Route::put('/jurusan/{id}', [JurusanController::class, 'update']);
+    Route::delete('/jurusan/{id}', [JurusanController::class, 'destroy']);
     
     // manajemen angkatan
     Route::get('/tahun_ajaran', [TahunAjaranController::class, 'index']);
