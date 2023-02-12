@@ -37,7 +37,12 @@ class JurusanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $jurusan = new Jurusan;
+
+        $jurusan->jurusan = $request->jurusan;
+        $jurusan->save();
+
+        return redirect('/jurusan');
     }
 
     /**
