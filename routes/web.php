@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\JurusanController;
+use App\Http\Controllers\AngkatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +28,9 @@ Route::get('/login', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::middleware('auth')->group(function () {
+    // manajemen jabatan
+    Route::get('/jurusan', [jurusanController::class, 'index']);
+    Route::get('/angkatan', [angkatanController::class, 'index']);    
+});
