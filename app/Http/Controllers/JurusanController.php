@@ -14,7 +14,9 @@ class JurusanController extends Controller
      */
     public function index()
     {
-        return view('jurusan.index');
+        $nomor = 1;
+        $jurusan = Jurusan::all();
+        return view('jurusan.index',compact('nomor','jurusan'));
     }
 
     /**
@@ -24,7 +26,7 @@ class JurusanController extends Controller
      */
     public function create()
     {
-        //
+        return view('jurusan.form');
     }
 
     /**

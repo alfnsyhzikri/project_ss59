@@ -30,7 +30,9 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
-    // manajemen jabatan
-    Route::get('/jurusan', [jurusanController::class, 'index']);
-    Route::get('/angkatan', [angkatanController::class, 'index']);    
+    // manajemen jurusan
+    Route::get('/jurusan', [JurusanController::class, 'index']);
+    Route::get('/jurusan/form', [JurusanController::class, 'create']);
+    // manajemen angkatan
+    Route::get('/angkatan', [AngkatanController::class, 'index']);
 });

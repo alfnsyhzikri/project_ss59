@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('judul','Data Jurusan')
+@section('judul','Tambah Data Jurusan')
 @section('content-header')
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data Jurusan</h1>
+          <h1>Tambah Data Jurusan</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Data Jurusan</li>
+            <li class="breadcrumb-item active">Tambah Data Jurusan</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <a href="/jurusan/form" class="btn btn-primary">Tambah Data</a>
+
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -36,31 +36,7 @@
         </div>
       </div>
       <div class="card-body">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Kode</th>
-              <th scope="col">Jurusan</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-              @foreach ($jurusan as $item)
-              <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>
-                      <a href="#" class="btn btn-sm btn-info">edit</a>
-                      <a href="#" class="btn btn-sm btn-danger">hapus</a>
-                  </td>
-                </tr>
-              @endforeach
 
-
-          </tbody>
-        </table>
       </div>
       <!-- /.card-body -->
 
