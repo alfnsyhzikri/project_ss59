@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('tahun_ajarans', function (Blueprint $table) {
             $table->id();
-            $table->string('tahun_ajar');
+            $table->string('tahun_ajaran');
             $table->timestamps();
         });
     }

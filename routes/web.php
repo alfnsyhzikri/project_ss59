@@ -37,4 +37,5 @@ Route::middleware('auth')->group(function () {
     // manajemen angkatan
     Route::get('/tahun_ajaran', [TahunAjaranController::class, 'index']);
     Route::get('/tahun_ajaran/form', [TahunAjaranController::class, 'create']);
+    Route::post('/tahun_ajaran', [TahunAjaranController::class, 'store']);
 });

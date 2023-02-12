@@ -37,7 +37,12 @@ class TahunAjaranController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tahun_ajaran = new TahunAjaran;
+
+        $tahun_ajaran->tahun_ajaran = $request->tahun_ajaran;
+        $tahun_ajaran->save();
+
+        return redirect('/tahun_ajaran');
     }
 
     /**
