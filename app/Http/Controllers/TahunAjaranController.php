@@ -93,6 +93,9 @@ class TahunAjaranController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tahun_ajaran = TahunAjaran::find($id);
+        $tahun_ajaran->delete();
+
+        return redirect('/tahun_ajaran');
     }
 }

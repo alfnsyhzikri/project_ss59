@@ -44,4 +44,5 @@ Route::middleware('auth')->group(function () {
     Route::post('/tahun_ajaran', [TahunAjaranController::class, 'store']);
     Route::get('/tahun_ajaran/edit/{id}', [TahunAjaranController::class, 'edit']);
     Route::put('/tahun_ajaran/{id}', [TahunAjaranController::class, 'update']);
+    Route::delete('/tahun_ajaran/{id}', [TahunAjaranController::class, 'destroy']);
 });
