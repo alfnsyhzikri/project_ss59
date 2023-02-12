@@ -64,7 +64,8 @@ class JurusanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $jurusan = Jurusan::find($id);
+        return view('jurusan.edit',compact('jurusan'));
     }
 
     /**
@@ -76,7 +77,12 @@ class JurusanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $jurusan = Jurusan::find($id);
+
+        $jurusan->jurusan = $request->jurusan;
+        $jurusan->save();
+
+        return redirect('/jurusan');
     }
 
     /**

@@ -34,6 +34,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/jurusan', [JurusanController::class, 'index']);
     Route::get('/jurusan/form', [JurusanController::class, 'create']);
     Route::post('/jurusan', [JurusanController::class, 'store']);
+    Route::get('/jurusan/edit/{id}', [JurusanController::class, 'edit']);
+    Route::put('/jurusan/{id}', [JurusanController::class, 'update']);
+    
     // manajemen angkatan
     Route::get('/tahun_ajaran', [TahunAjaranController::class, 'index']);
     Route::get('/tahun_ajaran/form', [TahunAjaranController::class, 'create']);

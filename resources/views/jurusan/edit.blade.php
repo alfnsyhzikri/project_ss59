@@ -1,16 +1,16 @@
 @extends('layouts.master')
-@section('judul','Data Jurusan')
+@section('judul','Edit Data Jurusan')
 @section('content-header')
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data Jurusan</h1>
+          <h1>Edit Data Jurusan</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active">Data Jurusan</li>
+            <li class="breadcrumb-item active">Edit Data Jurusan</li>
           </ol>
         </div>
       </div>
@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <a href="/jurusan/form" class="btn btn-primary">Tambah Data</a>
+
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -36,29 +36,19 @@
         </div>
       </div>
       <div class="card-body">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Jurusan</th>
-              <th scope="col">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-              @foreach ($jurusan as $item)
-              <tr>
-                <th scope="row">{{$nomor++}}</th>
-                <td>{{$item->jurusan}}</td>
-                  <td>
-                      <a href="/jurusan/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
-                      <a href="#" class="btn btn-sm btn-danger">hapus</a>
-                  </td>
-                </tr>
-              @endforeach
-
-
-          </tbody>
-        </table>
+        <form method="POST" action="/jurusan/{{$jurusan->id}}">
+            @method('PUT')
+            @csrf
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Kode</label>
+              <input type="text" name="kode" readonly VALUE="{{$jurusan->kode}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Jurusan</label>
+              <input type="text" VALUE="{{$jurusan->jurusan}}" name="jurusan" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Edit Data</button>
+          </form>
       </div>
       <!-- /.card-body -->
 
