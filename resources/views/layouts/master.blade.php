@@ -276,7 +276,7 @@
         </div>
       </div><!-- /.container-fluid -->
     </section> --}}
-    @yield('conten-header') 
+    @yield('content-header') 
     <!-- Main content -->
     {{-- <section class="content">
 

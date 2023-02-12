@@ -13,7 +13,7 @@ class AngkatanController extends Controller
      */
     public function index()
     {
-        //
+        return view('angkatan.index');
     }
 
     /**
