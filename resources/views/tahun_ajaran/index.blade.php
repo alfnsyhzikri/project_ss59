@@ -24,7 +24,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <h3 class="card-title">Title</h3>
+        <a href="/tahun_ajaran/form" class="btn btn-primary">Tambah Data</a>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -36,7 +36,31 @@
         </div>
       </div>
       <div class="card-body">
-        Start creating your amazing application!
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Kode</th>
+              <th scope="col">Tahun Ajaran</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+              @foreach ($tahun_ajaran as $item)
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>
+                      <a href="#" class="btn btn-sm btn-info">edit</a>
+                      <a href="#" class="btn btn-sm btn-danger">hapus</a>
+                  </td>
+                </tr>
+              @endforeach
+
+
+          </tbody>
+        </table>
       </div>
       <!-- /.card-body -->
 

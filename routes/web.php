@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\JurusanController;
-use App\Http\Controllers\AngkatanController;
+use App\Http\Controllers\TahunAjaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,5 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/jurusan', [JurusanController::class, 'index']);
     Route::get('/jurusan/form', [JurusanController::class, 'create']);
     // manajemen angkatan
-    Route::get('/angkatan', [AngkatanController::class, 'index']);
+    Route::get('/tahun_ajaran', [TahunAjaranController::class, 'index']);
+    Route::get('/tahun_ajaran/form', [TahunAjaranController::class, 'create']);
 });

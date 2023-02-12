@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Angkatan;
+use App\Models\TahunAjaran;
 
-class AngkatanController extends Controller
+class TahunAjaranController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,9 @@ class AngkatanController extends Controller
      */
     public function index()
     {
-        return view('angkatan.index');
+        $nomor = 1;
+        $tahun_ajaran = TahunAjaran::all();
+        return view('tahun_ajaran.index',compact('nomor','tahun_ajaran'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AngkatanController extends Controller
      */
     public function create()
     {
-        //
+        return view('tahun_ajaran.form');
     }
 
     /**

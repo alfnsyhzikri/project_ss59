@@ -243,7 +243,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/angkatan" class="nav-link">
+            <a href="/tahun_ajaran" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Tahun Ajaran
