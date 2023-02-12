@@ -41,4 +41,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/tahun_ajaran', [TahunAjaranController::class, 'index']);
     Route::get('/tahun_ajaran/form', [TahunAjaranController::class, 'create']);
     Route::post('/tahun_ajaran', [TahunAjaranController::class, 'store']);
+    Route::get('/tahun_ajaran/edit/{id}', [TahunAjaranController::class, 'edit']);
+    Route::put('/tahun_ajaran/{id}', [TahunAjaranController::class, 'update']);
 });

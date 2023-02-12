@@ -64,7 +64,8 @@ class TahunAjaranController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tahun_ajaran = TahunAjaran::find($id);
+        return view('tahun_ajaran.edit',compact('tahun_ajaran'));
     }
 
     /**
@@ -76,7 +77,12 @@ class TahunAjaranController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tahun_ajaran = TahunAjaran::find($id);
+
+        $tahun_ajaran->tahun_ajaran = $request->tahun_ajaran;
+        $tahun_ajaran->save();
+
+        return redirect('/tahun_ajaran');
     }
 
     /**
