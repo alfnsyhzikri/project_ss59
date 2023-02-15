@@ -13,20 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('daftar_siswas', function (Blueprint $table) {
+        Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('nisn')->unique();
-            $table->string('tgl_daftar');
-            $table->string('nm_siswa');
+            $table->string('nisn')->unique();;
+            $table->string('nama');
+            $table->bigInteger('jurusans_id');
             $table->string('jenis_kelamin');
             $table->string('tempat_lahir');
             $table->string('tgl_lahir');
-            $table->string('no_tlp');
             $table->string('alamat');
-            $table->string('agama');
-            $table->string('asal sekolah');
-            $table->string('foto');
-            $table->string('status');
+            $table->string('asal_sekolah');
+            $table->bigInteger('tahun_ajarans_id');
             $table->timestamps();
         });
     }
@@ -38,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('daftar_siswas');
+        Schema::dropIfExists('siswas');
     }
 };

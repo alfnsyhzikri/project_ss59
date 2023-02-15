@@ -30,6 +30,15 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
+    // manajemen siswa
+    Route::get('/siswa', [SiswaController::class, 'index']);
+    Route::get('/siswa/form', [SiswaController::class, 'create']);
+    Route::post('/siswa', [SiswaController::class, 'store']);
+    Route::get('/siswa/edit/{id}', [SiswaController::class, 'edit']);
+    Route::put('/siswa/{id}', [SiswaController::class, 'update']);
+    Route::delete('/siswa/{id}', [SiswaController::class, 'destroy']);
+    
+
     // manajemen jurusan
     Route::get('/jurusan', [JurusanController::class, 'index']);
     Route::get('/jurusan/form', [JurusanController::class, 'create']);

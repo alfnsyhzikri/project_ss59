@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Siswa;
+use App\Models\Jurusan;
+use App\Models\TahunAjaran;
 
 class SiswaController extends Controller
 {
@@ -13,7 +16,9 @@ class SiswaController extends Controller
      */
     public function index()
     {
-        //
+        $nomor = 1;
+        $siswa = Siswa::all();
+        return view('siswa.index',compact('nomor','siswa'));
     }
 
     /**
@@ -23,7 +28,9 @@ class SiswaController extends Controller
      */
     public function create()
     {
-        //
+        $jurusan = Jurusan::all();
+        $tahun_ajaran = TahunAjaran::all();
+        return view('siswa.form',compact('jurusan','tahun_ajaran'));
     }
 
     /**
@@ -34,7 +41,20 @@ class SiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $siswa = new Siswa;
+
+        $siswa->nisn = $request->nisn;
+        $siswa->nama = $request->nama;
+        $siswa->jurusans_id = $request->jurusan;
+        $siswa->jenis_kelamin = $request->jenis_kelamin;
+        $siswa->tempat_lahir = $request->tempat_lahir;
+        $siswa->tgl_lahir = $request->tgl_lahir;
+        $siswa->alamat = $request->alamat;
+        $siswa->asal_sekolah = $request->asal_sekolah;
+        $siswa->tahun_ajarans_id = $request->tahun_ajaran;
+        $siswa->save();
+
+        return redirect('/siswa');
     }
 
     /**
