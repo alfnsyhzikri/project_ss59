@@ -57,12 +57,12 @@
                     <th scope="row">{{$nomor++}}</th>
                     <td>{{$item->nisn}}</td>
                     <td>{{$item->nama}}</td>
-                    <td>{{$item->jurusans_id}}</td>
+                    <td>{{$item->jurusans->jurusan}}</td>
                     <td>{{$item->jenis_kelamin}}</td>
                     <td>{{$item->tempat_lahir}} / {{date_format(date_create($item->tgl_lahir),"d M Y")}}</td>
                     <td>{{$item->alamat}}</td>
                     <td>{{$item->asal_sekolah}}</td>
-                    <td>{{$item->tahun_ajarans_id}}</td>
+                    <td>{{$item->tahun_ajarans->tahun_ajaran}}</td>
                     <td>
                         <a href="/siswa/edit/{{$item->id}}" class="btn btn-sm btn-info">edit</a>
 
